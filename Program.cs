@@ -1,4 +1,8 @@
-﻿using System.Diagnostics;
+﻿// Jeran Burget
+// 8/23/2025
+// Lab 1: Vegenere Cipher
+
+using System.Diagnostics; 
 
 // Ask user for message
 Console.Clear();
@@ -83,7 +87,7 @@ static char ShiftLetter(char messageChar, char keyChar)
     int m = messageChar - 'a';
     int k = keyChar - 'a';
 
-    // Shift message by key, wrap around with % 25 (the length of the alphabet starting at 0)
+    // Shift message by key, wrap around with % 26 (the length of the alphabet starting at 0)
     int shifted = (m + k) % 26;
 
     return (char)(shifted + 'a');
